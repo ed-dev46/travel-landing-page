@@ -1,0 +1,113 @@
+:root {
+    --font-color: #000000;
+    --main-color: #000000;
+    --secondary-color: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #c5c5c5;
+}
+
+body {
+    background-color: #242424;
+}
+
+#navbar {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #36363691;
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+#navbar li {
+    margin-right: 2rem;
+}
+
+#navbar li:last-of-type {
+    margin-right: 0;
+}
+
+#navbar a {
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #5a5a5a;
+}
+
+/* 
+BEM - BLOCK ELEMENT MODIFIER
+BLOCK__ELEMENT--MODIFIER
+*/
+
+/* Hero Section */
+
+#hero-section {
+    background-color: #b2b2b2;
+    background-image: url(./img/david-carballar-FZU-vIW-lk8-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    padding: 1rem;
+}
+
+#hero-section h2 {
+    margin-bottom: 10rem;
+    margin-left: 3rem;
+    font-size: 5rem;
+    max-width: 80%;
+}
+
+#hero--controller {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#hero--controller button {
+    width: 30vw;
+    background: none;
+    cursor: pointer;
+    border: none;
+    color: transparent;
+    text-align: start;
+    padding: 1rem;
+}
+
+#hero--controller button:last-of-type {
+    text-align: end;
+}
+
+#hero--controller button:hover {
+    color: #c5c5c5;
+    font-weight: bolder;
+}
+
+/* destinos */
+/* pacotes */
+/* sobre */
+/* contato */
