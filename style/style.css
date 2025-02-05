@@ -1,7 +1,8 @@
 :root {
-    --font-color: #000000;
-    --main-color: #000000;
-    --secondary-color: #000000;
+    --light: #FFFBE6;
+    --dark-blue: #284b79;
+    --light-blue: #a8cef1;
+    --highlights: #FCCD2A;
 }
 
 * {
@@ -9,23 +10,22 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    color: #c5c5c5;
-}
-
-body {
-    background-color: #242424;
 }
 
 #navbar {
     position: absolute;
-    z-index: 1;
-    width: 100vw;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 80vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: #36363691;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    background-color: var(--dark-blue);
 }
 
 #navbar ul {
@@ -44,16 +44,16 @@ body {
 
 #navbar a {
     text-decoration: none;
+    color: var(--light);
+    padding: 5px;
+    border-bottom: 2px solid transparent;
+    transition: .3s;
 }
 
 #navbar a:hover {
-    background-color: #5a5a5a;
+    border-bottom: 2px solid var(--highlights);
+    color: var(--light-blue);
 }
-
-/* 
-BEM - BLOCK ELEMENT MODIFIER
-BLOCK__ELEMENT--MODIFIER
-*/
 
 /* Hero Section */
 
@@ -67,6 +67,7 @@ BLOCK__ELEMENT--MODIFIER
     display: flex;
     flex-direction: row;
     align-items: end;
+    justify-content: start;
     padding: 1rem;
 }
 
@@ -74,40 +75,50 @@ BLOCK__ELEMENT--MODIFIER
     margin-bottom: 10rem;
     margin-left: 3rem;
     font-size: 5rem;
-    max-width: 80%;
+    color: var(--highlights);
+    z-index: 1;
+    text-wrap: pretty;
+    /*max-width*/
 }
 
 #hero--controller {
     position: absolute;
+    z-index: 0;
     top: 0;
     left: 0;
-    z-index: 0;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
+    user-select: none;
 }
 
 #hero--controller button {
-    width: 30vw;
+    width: 20vw;
     background: none;
     cursor: pointer;
     border: none;
     color: transparent;
     text-align: start;
     padding: 1rem;
+    transition: .3s;
+    opacity: 0;
+    color: #c5c5c5;
+    font-weight: bolder;
+    background: linear-gradient(90deg, #a6caeb60, #ffffff00);
 }
 
 #hero--controller button:last-of-type {
     text-align: end;
+    background: linear-gradient(-90deg, #a6caeb60, #ffffff00);
+
 }
 
 #hero--controller button:hover {
-    color: #c5c5c5;
-    font-weight: bolder;
+    opacity: 1;
 }
 
-/* destinos */
+/* destinos*/
 /* pacotes */
 /* sobre */
 /* contato */
