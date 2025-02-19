@@ -57,6 +57,14 @@
     color: var(--light-blue);
 }
 
+section {
+    height: 100vh;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    flex-direction: column;
+}
+
 /* Hero Section */
 
 #hero-section {
@@ -65,12 +73,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
     align-items: baseline;
     justify-content: end;
-    padding: 1rem;
     padding-bottom: 10rem;
     padding-left: 3rem;
 }
@@ -92,6 +96,35 @@
 }
 
 /* destinos*/
+
+.section-title {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: var(--highlights);
+    text-shadow: var(--dark-blue) 2px 2px;
+    margin-bottom: 3rem;
+}
+
+#destination-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.card {
+    background-color: greenyellow;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.card-img {
+    height: 10rem;
+    border: 1px solid black;
+}
+
 /* pacotes */
 /* sobre */
 /* contato */
